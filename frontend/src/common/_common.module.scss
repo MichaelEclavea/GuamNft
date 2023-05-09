@@ -1,0 +1,42 @@
+@import "~bootstrap/scss/bootstrap";
+
+$commandBar-height: 48px;
+$page-height: calc(100vh - #{$commandBar-height});
+$page-max-width: 1320px;
+
+// Box-shadows
+$elevation4: 0 1.6px 3.6px 0 rgba(0, 0, 0, 0.132), 0 0.3px 0.9px 0 rgba(0, 0, 0, 0.108);
+$elevation8: 0 3.2px 7.2px 0 rgba(0, 0, 0, 0.132), 0 0.6px 1.8px 0 rgba(0, 0, 0, 0.108);
+$elevation16: 0 6.4px 14.4px 0 rgba(0, 0, 0, 0.132), 0 1.2px 3.6px 0 rgba(0, 0, 0, 0.108);
+$elevation64: 0 25.6px 57.6px 0 rgba(0, 0, 0, 0.22), 0 4.8px 14.4px 0 rgba(0, 0, 0, 0.18);
+
+@mixin customScrollbar {
+  height: 100%;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  background-color: white;
+  right: 8px;
+
+  &::-webkit-scrollbar {
+    width: 12px;
+    height: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    height: 5px;
+    border: 3.5px solid transparent;
+    background-clip: content-box;
+    border-radius: 6px;
+    background-color: lightgrey;
+  }
+
+  &::-webkit-scrollbar-button {
+    width: 0;
+    height: 0;
+    display: none;
+  }
+
+  &::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+}

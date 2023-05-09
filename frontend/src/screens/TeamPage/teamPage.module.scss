@@ -1,0 +1,13 @@
+@import '../../common/common.module';
+
+.teamPageContainer {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 24px;
+  min-height: $page-height;
+  padding: 32px;
+  position: relative;
+  width: 100%;
+}
