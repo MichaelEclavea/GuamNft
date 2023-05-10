@@ -7,12 +7,10 @@ import styles from './app.module.scss';
 function App() {
   return (
     <div className={styles.root}>
-      <BrowserRouter>
-        <Routes>
-          <Route path={'/'} element={<HomeScreen />} />
-          <Route path={'/login'} element={<LoginPage />} />
-        </Routes>
-      </BrowserRouter>
+      <Routes>
+        <Route path={'/'} element={<HomeScreen />} />
+        <Route path={'/login'} element={<LoginPage />} />
+      </Routes>
       <NavBar />
     </div>
   );

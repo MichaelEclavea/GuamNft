@@ -29,27 +29,27 @@
   // background-color: $ms-color-white;
   border-radius: 8px;
   // box-shadow: $ms-depth-shadow-64;
-  width: 600px;
-  min-height: 370px;
+  // width: 400px;
+  // height: 450px;
 }
 
-// .signIn {
-//   width: 380px;
-//   display: flex;
-//   flex-direction: column;
+.signIn {
+  width: 380px;
+  display: flex;
+  flex-direction: column;
 
-//   .title {
-//     font-size: $ms-font-size-24;
-//     margin: 0 auto 36px auto;
-//   }
+  .title {
+    // font-size: $ms-font-size-24;
+    margin: 0 auto 36px auto;
+  }
 
-//   .subTitle {
-//     font-size: $ms-font-size-16;
-//     z-index: 1;
-//     background-color: $ms-color-white;
-//     height: 16px;
-//   }
-// }
+  .subTitle {
+    // font-size: $ms-font-size-16;
+    z-index: 1;
+    // background-color: $ms-color-white;
+    height: 16px;
+  }
+}
 
 // .signUp {
 //   box-sizing: border-box;
@@ -70,41 +70,46 @@
 //   gap: 24px;
 // }
 
-// .buttons {
-//   border-radius: 6px;
-// }
+.buttons {
+  border-radius: 6px;
+  width: 100%;
+}
 
-// .googleButton {
-//   width: 100%;
-//   background-color: $ms-color-themeSecondary;
-//   margin-bottom: 36px;
-// }
+.googleButton {
+  width: 100%;
+  border-radius: 20px;
+  margin-bottom: 36px;
+}
 
-// .divider {
-//   @include flexStyles(center, center);
-//   box-sizing: border-box;
-//   position: relative;
-//   width: 100%;
+.divider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  margin-bottom: 12px;
+  margin-top: 12px;
+  position: relative;
+  width: 100%;
 
-//   .dividerText {
-//     font-size: $ms-font-size-16;
-//     margin-bottom: 36px;
-//     margin-top: -4px;
-//     background-color: $ms-color-white;
-//     z-index: 1;
-//   }
+  .dividerText {
+    // font-size: $ms-font-size-16;
+    // margin-bottom: 36px;
+    // margin-top: -4px;
+    background-color: white;
+    z-index: 1;
+  }
 
-//   .line {
-//     position: absolute;
-//     top: 0;
-//     bottom: 0;
-//     border: none;
-//     border-bottom: 1px solid $ms-color-neutralLight;
-//     width: 100%;
-//     height: 0px;
-//     z-index: 0;
-//   }
-// }
+  .line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    border: none;
+    border-top: 1px solid lightgray;
+    width: 100%;
+    height: 0px;
+    // z-index: 0;
+  }
+}
 
 // .signUpForm {
 //   box-sizing: border-box;
