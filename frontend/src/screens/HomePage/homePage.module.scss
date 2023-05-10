@@ -1,3 +1,5 @@
+@import '../../common/common.module';
+
 .homeScreen {
   min-height: 100vh;
   display: flex;
@@ -5,4 +7,22 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
+}
+
+.pageContainer {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  @include customScrollbar;
+  scroll-behavior: smooth;
+}
+
+.pageWrapper {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: $page-max-width;
+  min-height: 100vh;
 }

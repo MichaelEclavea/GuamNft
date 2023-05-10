@@ -1,10 +1,10 @@
 import { useState } from 'react';
-import FormInput from '../../components/form-input/FormInput';
-import { PrimaryButton, Text } from '@fluentui/react';
+import Form from 'react-bootstrap/Form';
 import { signInWithGooglePopup, createUserDocFromAuth } from '../../utils/firebase/firebase.utils';
+import Button from 'react-bootstrap/Button';
 import styles from './SignIn.module.scss';
 
-const SignIn = () => {
+export const SignIn = () => {
   const [userInfo, setUserInfo] = useState({
     email: '',
     password: '',
@@ -30,20 +30,20 @@ const SignIn = () => {
   return (
     <div className={styles.signIn}>
       <h2 className={styles.title}>Sign in</h2>
-      <PrimaryButton
+      <Button
         className={styles.googleButton}
         type='button'
         onClick={logGoogleUser}
         isGoogleSignIn={'google-sign-in'}
       >
         Sign in with Google
-      </PrimaryButton>
+      </Button>
       <div className={styles.divider}>
         <span className={styles.dividerText}>{'or'}</span>
         <hr className={styles.line}></hr>
       </div>
       <form onSubmit={handleSubmit}>
-        <FormInput
+        <Form.Control
           name='email'
           type='email'
           label='email'
@@ -52,7 +52,7 @@ const SignIn = () => {
           value={userInfo.email}
           required
         />
-        <FormInput
+        <Form.Control
           name='password'
           type='password'
           label='password'
@@ -62,11 +62,9 @@ const SignIn = () => {
           required
         />
         <section className={styles.buttonSection}>
-          <PrimaryButton className={styles.buttons} type='submit' >Sign In</PrimaryButton>
+          <Button className={styles.buttons} type='submit' >Sign In</Button>
         </section>
       </form>
     </div>
   )
 }
-
-export default SignIn
